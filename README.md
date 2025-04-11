@@ -19,40 +19,57 @@ Avant d'exécuter le projet, assurez-vous d'avoir :
 - **Gnuplot** pour la visualisation des données
 - **GCC** pour compiler le programme en C
 - **Crontab** pour l’exécution automatique
+  ## 🚀 Installation
 
-## 🚀 Installation
-
- 1️⃣ Cloner le dépôt
+### 1️⃣ Cloner le dépôt
 ```bash
 git clone https://github.com/Drissrad/script-surveillance-ressources.git
 cd script-surveillance-ressources
- 2️⃣ Donner les permissions d'exécution
+2️⃣ Donner les permissions d'exécution
+bash
 chmod +x monitor_system.sh
-
 3️⃣ Compiler le programme C
+bash
 gcc usage_plot.c -o usage_plot -lm
-
 📖 Utilisation
 🔍 Surveillance des ressources
 Lancer le script Bash :
-./monitor_system.sh
 
+bash
+
+./monitor_system.sh
 Le script prend en charge plusieurs options :
+
+bash
+Copier
+Modifier
 ./monitor_system.sh -h        # Afficher l'aide
 ./monitor_system.sh -d DATE   # Spécifier une date de début
 ./monitor_system.sh -e DATE   # Spécifier une date de fin
 ./monitor_system.sh -r TYPE   # Spécifier une ressource (CPU, RAM, DISK)
-
 Exemple :
+
+bash
+Copier
+Modifier
 ./monitor_system.sh -d 2024-04-01 -e 2024-04-10 -r CPU
 📊 Visualisation des données
 Exécuter le programme en C pour générer les graphiques :
-./usage_plot data.txt
 
+bash
+Copier
+Modifier
+./usage_plot data.txt
 ⚙️ Automatisation avec Crontab
 Vous pouvez programmer l'exécution automatique du script en l'ajoutant à Crontab :
+
+bash
+Copier
+Modifier
 crontab -e
-
 Ajoutez la ligne suivante pour exécuter le script toutes les heures :
-0 * * * * /chemin/vers/monitor_system.sh
 
+bash
+Copier
+Modifier
+0 * * * * /chemin/vers/monitor_system.sh
