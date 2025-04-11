@@ -26,9 +26,9 @@ Avant d'exécuter le projet, assurez-vous d'avoir :
 ```bash
 git clone https://github.com/Drissrad/script-surveillance-ressources.git
 cd script-surveillance-ressources
-2️⃣ Donner les permissions d'exécution
+###2️⃣ Donner les permissions d'exécution
 chmod +x monitor_system.sh
-3️⃣ Compiler le programme C
+### 3️⃣ Compiler le programme C
 gcc usage_plot.c -o usage_plot -lm
 📖 Utilisation
 🔍 Surveillance des ressources
@@ -49,7 +49,7 @@ Vous pouvez programmer l'exécution automatique du script en l'ajoutant à Cront
 crontab -e
 Ajoutez la ligne suivante pour exécuter le script toutes les heures :
 0 * * * * /chemin/vers/monitor_system.sh
-🛠️ Fonctionnalités techniques
+## 🛠️ Fonctionnalités techniques
 Bash pour la collecte des données système
 
 C (GCC) pour la gestion et l’affichage des graphiques
