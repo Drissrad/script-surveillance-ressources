@@ -22,15 +22,14 @@ Avant d'exécuter le projet, assurez-vous d'avoir :
 
 ## 🚀 Installation
 
-### 1️⃣ Cloner le dépôt
+ 1️⃣ Cloner le dépôt
 ```bash
 git clone https://github.com/Drissrad/script-surveillance-ressources.git
 cd script-surveillance-ressources
-
-### 2️⃣ Donner les permissions d'exécution
+ 2️⃣ Donner les permissions d'exécution
 chmod +x monitor_system.sh
 
-### 3️⃣ Compiler le programme C
+3️⃣ Compiler le programme C
 gcc usage_plot.c -o usage_plot -lm
 
 📖 Utilisation
