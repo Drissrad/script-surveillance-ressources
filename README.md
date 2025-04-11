@@ -26,30 +26,29 @@ Avant d'exécuter le projet, assurez-vous d'avoir :
 ```bash
 git clone https://github.com/Drissrad/script-surveillance-ressources.git
 cd script-surveillance-ressources
-### 2️⃣ Donner les permissions d'exécution
-```chmod +x monitor_system.sh
-###3️⃣ Compiler le programme C
-```gcc usage_plot.c -o usage_plot -lm
+2️⃣ Donner les permissions d'exécution
+chmod +x monitor_system.sh
+3️⃣ Compiler le programme C
+gcc usage_plot.c -o usage_plot -lm
 📖 Utilisation
 🔍 Surveillance des ressources
 Lancer le script Bash :
-``` ./monitor_system.sh
+./monitor_system.sh
 Le script prend en charge plusieurs options :
-``` ./monitor_system.sh -h        # Afficher l'aide
-``` ./monitor_system.sh -d DATE   # Spécifier une date de début
-``` ./monitor_system.sh -e DATE   # Spécifier une date de fin
-``` ./monitor_system.sh -r TYPE   # Spécifier une ressource (CPU, RAM, DISK)
+./monitor_system.sh -h        # Afficher l'aide
+./monitor_system.sh -d DATE   # Spécifier une date de début
+./monitor_system.sh -e DATE   # Spécifier une date de fin
+./monitor_system.sh -r TYPE   # Spécifier une ressource (CPU, RAM, DISK)
 Exemple :
-``` ./monitor_system.sh -d 2024-04-01 -e 2024-04-10 -r CPU
+./monitor_system.sh -d 2024-04-01 -e 2024-04-10 -r CPU
 📊 Visualisation des données
 Exécuter le programme en C pour générer les graphiques :
-``` ./usage_plot data.txt
+./usage_plot data.txt
 ⚙️ Automatisation avec Crontab
 Vous pouvez programmer l'exécution automatique du script en l'ajoutant à Crontab :
-```  crontab -e
+crontab -e
 Ajoutez la ligne suivante pour exécuter le script toutes les heures :
-
-``` 0 * * * * /chemin/vers/monitor_system.sh
+0 * * * * /chemin/vers/monitor_system.sh
 🛠️ Fonctionnalités techniques
 Bash pour la collecte des données système
 
@@ -62,6 +61,3 @@ Gestion des logs et stockage des rapports
 Traitement des arguments en ligne de commande avec getopts
 
 Gestion des erreurs et logs détaillés
-
-
-
