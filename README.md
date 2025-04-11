@@ -1,75 +1,61 @@
 # 📊 Script de Surveillance des Ressources
 
-Ce projet est un outil de surveillance des ressources système sous Linux. Il inclut un script Bash (`monitor_system.sh`) pour la collecte des données et un programme en C (`usage_plot.c`) pour la visualisation graphique via **Gnuplot**.
+Ce projet est un outil de surveillance des ressources système sous Linux.  
+Il inclut un script Bash (`monitor_system.sh`) pour la collecte des données et un programme en C (`usage_plot.c`) pour la visualisation graphique via **Gnuplot**.
+
+---
 
 ## 🛠️ Fonctionnalités
 
-- Surveillance en temps réel des ressources (CPU, RAM, disque)
-- Génération et stockage des rapports d’utilisation
-- Visualisation des données sous forme de graphiques
-- Automatisation via **Crontab**
-- Interface en ligne de commande avec plusieurs options
+- 🔁 Surveillance en temps réel des ressources (CPU, RAM, disque)
+- 🧾 Génération et stockage des rapports d’utilisation
+- 📈 Visualisation des données sous forme de graphiques
+- ⏱️ Automatisation via **Crontab**
+- 💻 Interface en ligne de commande avec plusieurs options
+
+---
 
 ## 📌 Prérequis
 
-Avant d'exécuter le projet, assurez-vous d'avoir :
+Assurez-vous d’avoir installé :
 
-- **Linux** (Ubuntu recommandé)
-- **Bash** installé (par défaut sous Linux)
-- **Gnuplot** pour la visualisation des données
-- **GCC** pour compiler le programme en C
-- **Crontab** pour l’exécution automatique
-  ## 🚀 Installation
+- 🐧 Linux (Ubuntu recommandé)
+- 🖥️ Bash (par défaut sous Linux)
+- 📉 Gnuplot pour la visualisation
+- 🧱 GCC pour compiler le programme C
+- 🕒 Crontab pour l’exécution automatique
 
-### 1️⃣ Cloner le dépôt
+---
+
+## 🚀 Installation & Utilisation
+
 ```bash
+# 1️⃣ Cloner le dépôt
 git clone https://github.com/Drissrad/script-surveillance-ressources.git
 cd script-surveillance-ressources
-2️⃣ Donner les permissions d'exécution
-```bash
+
+# 2️⃣ Donner les permissions d'exécution
 chmod +x monitor_system.sh
-3️⃣ Compiler le programme C
-bash
+
+# 3️⃣ Compiler le programme C
 gcc usage_plot.c -o usage_plot -lm
-📖 Utilisation
-🔍 Surveillance des ressources
-Lancer le script Bash :
 
-bash
-
+# 🔍 Lancer la surveillance
 ./monitor_system.sh
-Le script prend en charge plusieurs options :
 
-bash
-Copier
-Modifier
-./monitor_system.sh -h        # Afficher l'aide
-./monitor_system.sh -d DATE   # Spécifier une date de début
-./monitor_system.sh -e DATE   # Spécifier une date de fin
-./monitor_system.sh -r TYPE   # Spécifier une ressource (CPU, RAM, DISK)
-Exemple :
+# ✅ Options disponibles :
+./monitor_system.sh -h           # Afficher l'aide
+./monitor_system.sh -d DATE      # Spécifier une date de début
+./monitor_system.sh -e DATE      # Spécifier une date de fin
+./monitor_system.sh -r TYPE      # Spécifier la ressource (CPU, RAM, DISK)
 
-bash
-Copier
-Modifier
+# 🧪 Exemple
 ./monitor_system.sh -d 2024-04-01 -e 2024-04-10 -r CPU
-📊 Visualisation des données
-Exécuter le programme en C pour générer les graphiques :
 
-bash
-Copier
-Modifier
+# 📊 Visualiser les données
 ./usage_plot data.txt
-⚙️ Automatisation avec Crontab
-Vous pouvez programmer l'exécution automatique du script en l'ajoutant à Crontab :
 
-bash
-Copier
-Modifier
+# ⚙️ Automatiser avec Crontab (exécution chaque heure)
 crontab -e
-Ajoutez la ligne suivante pour exécuter le script toutes les heures :
-
-bash
-Copier
-Modifier
+# Ajouter la ligne suivante :
 0 * * * * /chemin/vers/monitor_system.sh
