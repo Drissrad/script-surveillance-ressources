@@ -26,7 +26,7 @@ Avant d'exécuter le projet, assurez-vous d'avoir :
 git clone https://github.com/Drissrad/script-surveillance-ressources.git
 cd script-surveillance-ressources
 2️⃣ Donner les permissions d'exécution
-bash
+```bash
 chmod +x monitor_system.sh
 3️⃣ Compiler le programme C
 bash
